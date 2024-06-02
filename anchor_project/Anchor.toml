@@ -7,11 +7,14 @@ skip-lint = false
 [programs.localnet]
 anchor_project = "3kAVGR8RrGNnutMWiVYi2DVs12NuhKhtKGQpn1TPQy7V"
 
+[programs.devnet]
+anchor_project = "3kAVGR8RrGNnutMWiVYi2DVs12NuhKhtKGQpn1TPQy7V"
+
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "devnet"
 wallet = "/home/enyu/.config/solana/id.json"
 
 [scripts]
