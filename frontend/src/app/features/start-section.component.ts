@@ -5,7 +5,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import * as web3 from "@solana/web3.js";
 import * as anchor from "@coral-xyz/anchor";
-import {BN} from "bn.js";
 
 import {
   injectWallet,
@@ -84,7 +83,7 @@ export class StartComponent implements OnInit {
       this.program.programId
     );
 
-    await this.program.methods.mintKey(startKey.publicKey, new BN(0))
+    await this.program.methods.mintKey(startKey.publicKey, new anchor.BN(0))
       .accounts({
         systemProgram: web3.SystemProgram.programId,
         authority: this.program.provider.publicKey,
